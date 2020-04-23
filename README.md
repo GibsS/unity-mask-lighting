@@ -15,6 +15,7 @@ Using the library requires a few steps:
 - Drag the camera into your scene and delete any other cameras
 - Create a layer called "Lighting" (or anything else)
 - In the child camera, set the "Culling Mask" to only that "Lighting" layer
+- In the parent camera, make sure "Lighting" is unticked in the "Culling Mask"
 - To add a "Light", add an GameObject with a SpriteRenderer in the "Lighting" layer, the colours of the sprite will multiplied to other sprites
 
 You can check the sample scene to get a better sense of how your scene needs to be layed out.
@@ -27,16 +28,15 @@ If you want to use an existing camera, you need to:
 - Set the the local position, local scale and roation to zero
 - Create a layer called "Lighting" (or anything else)
 - In the child camera, set the "Culling Mask" to only that "Lighting" layer
+- In the parent camera, make sure "Lighting" is unticked in the "Culling Mask"
 - Add the ```LightingCamera``` script to the main camera and set the main and light camera in the script (parent and child camera respectively)
-- To add a "Light", add an GameObject with a SpriteRenderer in the "Lighting" layer, the colours of the sprite will multiplied to other sprites
+- To add a "Light", add an GameObject with a SpriteRenderer in the "Lighting" layer and make sure the sprite is the shape and colour of the light you want
 
 ## Lighting modes
 
-All that this library does really is: 1. render lights onto a texture 2. overlay that texture over everything else. The lighting sprites can be
-anything you desire but you can stick with white circles if you just want circular lights.
+All that this library basically does is: 1. render your lights onto a texture 2. overlay that texture over everything else. The lighting sprites can be anything you desire but you can stick with white circles if you just want circular lights.
 
-By default, sprites in Unity use the Sprites-Default material which blends colors by adding them. I added a material called LightMaterial you
-can add to your light SpriteRenderer so that the "maximum" color is picked.
+By default, sprites in Unity use the Sprites-Default material which blends colors by adding them. I added a material called LightMaterial you can add to your light SpriteRenderer so that the "maximum" color is picked.
 
 <p float="left">
   <img src="Meta/add-lighting.jpg" width="40%" />
