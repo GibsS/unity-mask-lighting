@@ -4,7 +4,9 @@
 
 <img src="Meta/nuclear_throne.png"/>
 
-These assets are also used in my Ludum Dare 46 entry: [Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
+These assets are also used in my Ludum Dare 46 entry so you can test it out here: 
+[Darkness Draws Near](https://ldjam.com/events/ludum-dare/46/darkness-draws-near)
+| [Direct link](https://gibss.github.io/test/darkness-draws-near/v0.3/index.html)
 
 ## Integrate
 
@@ -34,7 +36,7 @@ If you want to use an existing camera, you need to:
 
 ## Lighting modes
 
-All that this library basically does is: 1. render your lights onto a texture 2. overlay that texture over everything else. The lighting sprites can be anything you desire but you can stick with white circles if you just want circular lights.
+All that this library basically does is: 1. render your lights onto a texture 2. overlay that texture over everything else. The lighting sprites can be anything you desire but you can stick with white circles if you just want circular lights. But it doesn't even need to be a SpriteRenderer, it could also be a mesh. As long as it's part of the "Lighting" layer, it will act as a light.
 
 By default, sprites in Unity use the Sprites-Default material which blends colors by adding them. I added a material called LightMaterial you can add to your light SpriteRenderer so that the "maximum" color is picked.
 
