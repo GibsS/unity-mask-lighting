@@ -32,7 +32,11 @@ If you want to use an existing camera, you need to:
 - In the child camera, set the "Culling Mask" to only that "Lighting" layer
 - In the parent camera, make sure "Lighting" is unticked in the "Culling Mask"
 - Add the ```LightingCamera``` script to the main camera and set the main and light camera in the script (parent and child camera respectively)
-- To add a "Light", add an GameObject with a SpriteRenderer in the "Lighting" layer and make sure the sprite is the shape and colour of the light you want
+- To add a "Light":
+-- Add an GameObject with a SpriteRenderer
+-- Place the GameObject in the "Lighting" layer
+-- Make sure the sprite is the shape and colour of the light you want
+-- Add "LightingMaterial" to the SpriteRenderer
 
 ## Lighting modes
 
